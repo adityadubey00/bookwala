@@ -1,11 +1,10 @@
 import React from 'react'
-import ReactPlayer from 'react-player'
 import Video from"../assets/video.mp4";
 const Banner = () => {
   return (
   <>
-  <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row'>
-   <div className='w-full md:w-1/2 mt-12 md:mt-32 '>
+  <div className='max-w-screen-2xl container overflow-x-hidden mx-auto md:px-20 px-4 flex flex-col md:flex-row'>
+   <div className='w-[100vw] md:w-1/2 mt-12 md:mt-9 pt-12 '>
    <div className=' space-y-12'>
     <h1 className='text-3xl font-bold'>"A room without books is like a<br/> <span className='text-pink-500'>body without a soul.</span>" – Marcus Tullius Cicero
 
@@ -30,8 +29,8 @@ Books are more than just words on a page; they are gateways to other worlds, exp
    </div>
    <button className="btn btn-secondary mt-6">Secondary</button>
    </div>
-    <div className='w-full md:w-1/2'>
-   <ReactPlayer url={'/video.mp4'}/>
+    <div className='w-full md:w-1/2 mt-20 p-5  shadow-pink-500 '>
+    <div className="container-fluid p-0 rounded-2xl"> <video id="bannerVideo" autoPlay muted loop> <source src={Video} type="video/mp4" /> </video> </div>
     </div>
   </div>
   </>
