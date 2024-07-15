@@ -1,103 +1,75 @@
-const list = [
-
-    {
+const list = [{
         "id": 1,
-        "name": "Story Book",
+        "name": "Adventure Tales",
         "type": "StoryBook",
         "price": 0,
         "category": "Free",
-        "image": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?t=st=1720908453~exp=1720912053~hmac=71797445db8cc276081c75b5594270fccb45f339c2cf3ec601519b00f955fc0b&w=740"
-
-
-
+        "image": "https://img.freepik.com/free-vector/adventure-book-cover_1284-17653.jpg"
     },
     {
         "id": 2,
-        "name": "Story Book",
-        "type": "Sports Book",
+        "name": "Sports Heroes",
+        "type": "SportsBook",
         "price": 0,
         "category": "Free",
-        "image": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?t=st=1720908453~exp=1720912053~hmac=71797445db8cc276081c75b5594270fccb45f339c2cf3ec601519b00f955fc0b&w=740"
-
-
-
+        "image": "https://img.freepik.com/free-vector/sport-book-cover_1284-17543.jpg"
     },
     {
         "id": 3,
-        "name": "Story Book",
+        "name": "Fairy Tales",
         "type": "StoryBook",
         "price": 0,
         "category": "Free",
-        "image": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?t=st=1720908453~exp=1720912053~hmac=71797445db8cc276081c75b5594270fccb45f339c2cf3ec601519b00f955fc0b&w=740"
-
-
-
+        "image": "https://img.freepik.com/free-vector/fairy-tales-book-cover_1284-17649.jpg"
     },
     {
         "id": 4,
-        "name": "Story Book",
+        "name": "Science Wonders",
         "type": "StoryBook",
-        "price": "0",
+        "price": 0,
         "category": "Free",
-        "image": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?t=st=1720908453~exp=1720912053~hmac=71797445db8cc276081c75b5594270fccb45f339c2cf3ec601519b00f955fc0b&w=740"
-
-
-
+        "image": "https://img.freepik.com/free-vector/science-book-cover_1284-17750.jpg"
     },
     {
         "id": 5,
-        "name": "Story Book",
+        "name": "Mystery Nights",
         "type": "StoryBook",
-        "price": "0",
+        "price": 0,
         "category": "Free",
-        "image": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?t=st=1720908453~exp=1720912053~hmac=71797445db8cc276081c75b5594270fccb45f339c2cf3ec601519b00f955fc0b&w=740"
-
-
-
+        "image": "https://img.freepik.com/free-vector/mystery-book-cover_1284-17651.jpg"
     },
     {
         "id": 6,
-        "name": "Story Book",
+        "name": "Historical Tales",
         "type": "StoryBook",
-        "price": "0",
+        "price": 0,
         "category": "Free",
-        "image": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?t=st=1720908453~exp=1720912053~hmac=71797445db8cc276081c75b5594270fccb45f339c2cf3ec601519b00f955fc0b&w=740"
-
-
-
+        "image": "https://img.freepik.com/free-vector/history-book-cover_1284-17652.jpg"
     },
     {
         "id": 7,
-        "name": "Dance Book",
+        "name": "Dance Moves",
         "type": "Dance Book",
-        "price": "20",
-        "category": "dance",
-        "image": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?t=st=1720908453~exp=1720912053~hmac=71797445db8cc276081c75b5594270fccb45f339c2cf3ec601519b00f955fc0b&w=740"
-
-
-
+        "price": 20,
+        "category": "Dance",
+        "image": "https://img.freepik.com/free-vector/dance-book-cover_1284-17753.jpg"
     },
     {
         "id": 8,
-        "name": "Music Book",
+        "name": "Music Theory",
         "type": "Music Book",
-        "price": "0",
+        "price": 0,
         "category": "Free",
-        "image": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?t=st=1720908453~exp=1720912053~hmac=71797445db8cc276081c75b5594270fccb45f339c2cf3ec601519b00f955fc0b&w=740"
-
-
-
+        "image": "https://img.freepik.com/free-vector/music-book-cover_1284-17754.jpg"
     },
     {
         "id": 9,
-        "name": "Food Book",
+        "name": "Gourmet Recipes",
         "type": "Food Book",
-        "price": "100",
+        "price": 100,
         "category": "Food",
-        "image": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?t=st=1720908453~exp=1720912053~hmac=71797445db8cc276081c75b5594270fccb45f339c2cf3ec601519b00f955fc0b&w=740"
-
-
-
+        "image": "https://img.freepik.com/free-vector/food-book-cover_1284-17755.jpg"
     }
-]
-export default list
+];
+
+export default list;
