@@ -15,7 +15,7 @@ const FreeBook = () => {
        setBook(res.data.filter((data)=>data.category==="Free"))
 
           }
-          catch{
+          catch(error){
               console.log(error);
 
           }

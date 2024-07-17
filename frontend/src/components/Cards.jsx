@@ -7,9 +7,9 @@ const item =props.item;
   return (
     <>
     <div className='mt-4 my-3 p-3 dark:bg-slate-900 dark:text-white '>
-    <div className="card w-92 h-[400px] bg-base-100  shadow-xl hover:scale-105 duration-200 dark:text-black ">
+    <div className="card w-92 h-[350px] bg-base-100  shadow-xl hover:scale-105 duration-200 dark:text-black ">
   <figure>
-    <img className=' '
+    <img className='w-3/4 '
       src={item.image}
       alt="Shoes" />
   </figure>

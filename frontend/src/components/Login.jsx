@@ -1,15 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
+import axios from 'axios';
+import { toast } from 'react-hot-toast';
 
-const Login = () => {
+const Login = (props) => {
+    const setAuthUser=props.setAuthUser
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = async (data) => {
+        const userInfo = {
+            email: data.email,
+            password: data.password,
+        };
+
+        try {
+            const res = await axios.post("http://localhost:4001/users/login", userInfo);
+            if (res.data) {
+                toast.success('Login Successful!');
+                localStorage.setItem("Users", JSON.stringify(res.data.user));
+                setAuthUser(true);
+                document.getElementById("my_modal_3").close();
+
+          
+            }
+        } catch (error) {
+            if (error.response) {
+                toast.error("Error: " + error.response.data.message);
+                setTimeout(()=>{},3000)
+            }
+        }
+    };
 
     return (
         <div>
@@ -17,10 +42,10 @@ const Login = () => {
                 <div className="modal-box">
                     <form onSubmit={handleSubmit(onSubmit)} method="dialog">
                         {/* Close button */}
-                        <Link to="/" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"   
-                                   onClick={() => document.getElementById("my_modal_3").close()}
+                        <Link to="/" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                              onClick={() => document.getElementById("my_modal_3").close()}
                         >✕</Link>
-                        <h3 className="font-bold text-lg" >Log In</h3>
+                        <h3 className="font-bold text-lg">Log In</h3>
 
                         {/* Email */}
                         <div className='mt-4 space-y-2'>

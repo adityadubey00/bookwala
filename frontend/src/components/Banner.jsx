@@ -21,7 +21,7 @@ const Banner = () => {
               <input type="email" className="w-[80%] px-4 py-2 rounded-xl  dark:bg-slate-900 dark:text-white outline-none border " placeholder="Email" />
             </div>
           </div>
-          <button className="btn btn-secondary mt-6">Secondary</button>
+          <button className="btn btn-secondary mt-6">Get Started</button>
         </div>
         <div className='w-full md:w-1/2 mt-20 p-5'>
           <div className="container-fluid p-0 rounded-2xl shadow-pink-900">
