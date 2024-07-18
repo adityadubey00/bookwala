@@ -18,7 +18,7 @@ const SignUp = () => {
             password:data.password,
         }
       
-       await axios.post("http://localhost:4001/users/signup",userInfo)
+       await axios.post("https://bookwala-kerk.vercel.app/users/signup",userInfo)
         .then((res)=>{
             if(res.data){
                 toast.success('SignUp Successful!');
