@@ -11,7 +11,7 @@ app.use(express.json());
 dotenv.config();
 
 const PORT = process.env.PORT || 4000;
-const URI = process.`https://bookwala.vercel.app//bookwala`;
+const URI = process.`https://bookwala.vercel.app/bookwala`;
 
 //connect to mongodb
 //
